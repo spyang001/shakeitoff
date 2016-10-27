@@ -1,0 +1,43 @@
+﻿@model ShakeitOff.Models.UserRoleViewModel
+
+
+<!DocType html>
+
+<html>
+<head>
+     <meta name="viewport" content="width=device-width"/>
+    <title>SelectRole</title>
+</head>
+
+<body>
+
+    <div>
+        @using (Html.BeginForm("Select", "Admin", FormMethod.Post))
+        {
+            <h3> Name</h3>
+            <p>@Model.FirstName</p><p>@Model.LastName</p>
+
+            <h3>User Role</h3>
+            @Html.HiddenFor(model => Model.Id)
+            @Html.ListBox("SelectedRoles", Model.UserRoles)
+        }
+    </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
